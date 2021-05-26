@@ -49,7 +49,7 @@ nav {
 
 #nav-menu {
   flex-basis: 70%;
-  /* padding-top: 2rem; */
+  padding-top: 2rem;
 
   display: flex;
   flex-direction: column;
@@ -125,6 +125,19 @@ main {
   padding: 2rem;
   line-height: 3rem;
   border-radius: 5px;
+
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .main-content h1 {
