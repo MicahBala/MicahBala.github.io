@@ -7,69 +7,64 @@
     <title>Micah Bala | Online</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap"
       rel="stylesheet"
     />
     <script src="https://use.fontawesome.com/d90234d410.js"></script>
   </head>
   <body>
     <div class="container">
-      <nav>
-        <div class="menu-icon" onclick="toggleMenu()">
-          <i class="fa fa-bars"></i>
-        </div>
-        <div class="portrait">
+      <header class="header">
+        <div class="profile">
           <img src="images/me.jpg" alt="micah's picture" />
           <h1>Micah Bala</h1>
           <h3>Full-stack Web Developer</h3>
         </div>
-        <div id="nav-menu">
-          <ul class="menu">
-            <li class="active"><a href="index.html">Welcome</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-          <div class="social">
-            <a href="https://github.com/micahbala" target="_blank"
+        <div class="navigation">
+          <nav>
+            <div id="menu-icon" onclick="toggleMenu()">
+              <i class="fa fa-bars"></i>
+            </div>
+            <ul class="menu hide" id="menu-list">
+              <li class="active"><a href="index.html">Welcome</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="links">
+            <div class="social">
+              <a href="https://github.com/micahbala" target="_blank"
               ><i class="fa fa-github-square"></i
             ></a>
             <a href="https://twitter.com/micahbala" target="_blank"
               ><i class="fa fa-twitter-square"></i
             ></a>
-            <a href="https://linkedin.com/in/micahbala" target="_blank"
-              ><i class="fa fa-linkedin"></i
-            ></a>
+            <a href="https://linkedin.com/in/micahbala" target="_blank"> <i class="fa fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
-      </nav>
-      <main>
+      </header>
+      <main class="main">
         <div class="main-content">
           <h1>Hello, I am Micah,</h1>
-          <p>a full-stack web developer based in Nigeria.</p>
-          <div class="stack">
-            <span>HTML/CSS</span>
-            <span>JavaScript</span>
-            <span>NodeJS</span>
-            <span>ExpressJS</span>
-            <span>MongoDB</span>
-            <span>PostgreSQL</span>
-          </div>
-        </div>
+          <p>a full-stack web developer based in Nigeria, and using technology to solve problems.</p>
+            <a href="#">My Projects</a>
       </main>
     </div>
 
-    <!-- JS for toggle menu -->
     <script>
-      let menu = document.getElementById("nav-menu");
-      // menu.style.maxHeight = "0px";
+      let menu = document.getElementById("menu-list");
 
       function toggleMenu() {
-        if (menu.style.maxHeight == "0px") {
-          menu.style.maxHeight = "200px";
+        if(menu.classList.contains("hide")) {
+          menu.classList.remove("hide");
+          menu.classList.add("show");
         } else {
-          menu.style.maxHeight = "0px";
+          menu.classList.remove("show");
+          menu.classList.add("hide")
         }
       }
     </script>
