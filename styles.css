@@ -22,7 +22,7 @@ body {
 
 body::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: rgba(39, 46, 51, 0.8);
@@ -217,7 +217,6 @@ ul li a:hover,
     width: 100%;
     padding-left: 2rem;
     margin: 0;
-    border: solid 1px red;
   }
   .main-content h1 {
     font-size: 3rem;
