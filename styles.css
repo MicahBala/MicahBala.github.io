@@ -204,6 +204,7 @@ ul li a:hover,
     position: absolute;
     top: 0;
     left: 20;
+    transform: translateY(-10px);
   }
 
   .main-content {
