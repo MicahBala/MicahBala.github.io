@@ -26,8 +26,8 @@ body::after {
   top: 0;
   left: 0;
   background: rgba(39, 46, 51, 0.8);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: -10;
 }
 
@@ -66,7 +66,7 @@ body::after {
 }
 
 nav {
-  padding-bottom: 8rem;
+  padding-bottom: 6rem;
 }
 
 #menu-icon {
@@ -92,9 +92,9 @@ ul li a:hover,
   font-weight: bold;
 }
 
-.social {
+/* .social {
   padding-top: 2rem;
-}
+} */
 
 .social a {
   color: #ebfbff;
@@ -116,6 +116,7 @@ ul li a:hover,
   max-width: 700px;
   padding: 3rem;
   margin: 8rem 0 0 8rem;
+  line-height: 3rem;
 
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
@@ -153,6 +154,26 @@ ul li a:hover,
 }
 
 /* 
+***** About Page *****
+*/
+.about-content {
+  width: 70%;
+  padding: 2rem;
+  line-height: 3rem;
+  margin: 10%;
+}
+
+.about-content h1 {
+  font-size: 4rem;
+  padding-bottom: 1.5rem;
+}
+
+.about-content p {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* 
 ********* Media Query for Menu ************
 */
 
@@ -166,7 +187,9 @@ ul li a:hover,
   }
 
   .profile {
-    display: none;
+    padding-top: 200px;
+    padding-bottom: 0;
+    margin-top: -175px;
   }
 
   nav {
@@ -200,11 +223,10 @@ ul li a:hover,
   }
 
   .social {
-    padding-right: 2rem;
     position: absolute;
-    top: 0;
+    top: 10;
     left: 20;
-    transform: translateY(-10px);
+    transform: translateY(-50px);
   }
 
   .main-content {
@@ -221,6 +243,12 @@ ul li a:hover,
   }
   .main-content h1 {
     font-size: 3rem;
+    margin: 0;
+  }
+
+  .about-content {
+    width: 100%;
+    padding: 4rem 2rem 0 2rem;
     margin: 0;
   }
 }

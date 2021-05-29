@@ -35,14 +35,16 @@
             </ul>
           </nav>
           <div class="links">
-            <div class="social">
+            <div class="social" id="social-media">
               <a href="https://github.com/micahbala" target="_blank"
-              ><i class="fa fa-github-square"></i
-            ></a>
-            <a href="https://twitter.com/micahbala" target="_blank"
-              ><i class="fa fa-twitter-square"></i
-            ></a>
-            <a href="https://linkedin.com/in/micahbala" target="_blank"> <i class="fa fa-linkedin"></i></a>
+                ><i class="fa fa-github-square"></i
+              ></a>
+              <a href="https://twitter.com/micahbala" target="_blank"
+                ><i class="fa fa-twitter-square"></i
+              ></a>
+              <a href="https://linkedin.com/in/micahbala" target="_blank">
+                <i class="fa fa-linkedin"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -50,21 +52,36 @@
       <main class="main">
         <div class="main-content">
           <h1>Hello, I am Micah,</h1>
-          <p>a full-stack web developer based in Nigeria, and using technology to solve problems.</p>
-            <a href="#">My Projects</a>
+          <p>
+            based in Nigeria, I develop mordern web sites and web apps for
+            businesses and individuals.
+          </p>
+          <a href="#">My Projects</a>
+        </div>
       </main>
     </div>
 
     <script>
       let menu = document.getElementById("menu-list");
+      let social = document.getElementById("social-media");
 
       function toggleMenu() {
-        if(menu.classList.contains("hide")) {
+        if (menu.classList.contains("hide")) {
           menu.classList.remove("hide");
           menu.classList.add("show");
+
+          // social.style.position = "absolute";
+          // social.style.top = "10";
+          // social.style.left = "20";
+          social.style.transform = "translateY(-210px)";
         } else {
           menu.classList.remove("show");
-          menu.classList.add("hide")
+          menu.classList.add("hide");
+
+          // social.style.position = "absolute";
+          // social.style.top = "10";
+          // social.style.left = "20";
+          social.style.transform = "translateY(-50px)";
         }
       }
     </script>

@@ -7,45 +7,50 @@
     <title>Micah Bala | Online</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap"
       rel="stylesheet"
     />
     <script src="https://use.fontawesome.com/d90234d410.js"></script>
   </head>
   <body>
     <div class="container">
-      <nav>
-        <div class="menu-icon" onclick="toggleMenu()">
-          <i class="fa fa-bars"></i>
-        </div>
-        <div class="portrait">
+      <header class="header">
+        <div class="profile">
           <img src="images/me.jpg" alt="micah's picture" />
           <h1>Micah Bala</h1>
           <h3>Full-stack Web Developer</h3>
         </div>
-        <div id="nav-menu">
-          <ul class="menu">
-            <li><a href="index.html">Welcome</a></li>
-            <li class="active"><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-          <div class="social">
-            <a href="https://github.com/micahbala" target="_blank"
-              ><i class="fa fa-github-square"></i
-            ></a>
-            <a href="https://twitter.com/micahbala" target="_blank"
-              ><i class="fa fa-twitter-square"></i
-            ></a>
-            <a href="https://linkedin.com/in/micahbala" target="_blank"
-              ><i class="fa fa-linkedin"></i
-            ></a>
+        <div class="navigation">
+          <nav>
+            <div id="menu-icon" onclick="toggleMenu()">
+              <i class="fa fa-bars"></i>
+            </div>
+            <ul class="menu hide" id="menu-list">
+              <li><a href="index.html">Welcome</a></li>
+              <li class="active"><a href="about.html">About Me</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="links">
+            <div class="social" id="social-media">
+              <a href="https://github.com/micahbala" target="_blank"
+                ><i class="fa fa-github-square"></i
+              ></a>
+              <a href="https://twitter.com/micahbala" target="_blank"
+                ><i class="fa fa-twitter-square"></i
+              ></a>
+              <a href="https://linkedin.com/in/micahbala" target="_blank">
+                <i class="fa fa-linkedin"></i
+              ></a>
+            </div>
           </div>
         </div>
-      </nav>
-      <main>
-        <div class="main-content">
+      </header>
+      <main class="main">
+        <div class="about-content">
           <h1>About me</h1>
           <p>
             I am a web developer who is passionate about using technology to
@@ -56,16 +61,27 @@
       </main>
     </div>
 
-    <!-- JS for toggle menu -->
     <script>
-      let menu = document.getElementById("nav-menu");
-      // menu.style.maxHeight = "0px";
+      let menu = document.getElementById("menu-list");
+      let social = document.getElementById("social-media");
 
       function toggleMenu() {
-        if (menu.style.maxHeight == "0px") {
-          menu.style.maxHeight = "200px";
+        if (menu.classList.contains("hide")) {
+          menu.classList.remove("hide");
+          menu.classList.add("show");
+
+          // social.style.position = "absolute";
+          // social.style.top = "10";
+          // social.style.left = "20";
+          social.style.transform = "translateY(-210px)";
         } else {
-          menu.style.maxHeight = "0px";
+          menu.classList.remove("show");
+          menu.classList.add("hide");
+
+          // social.style.position = "absolute";
+          // social.style.top = "10";
+          // social.style.left = "20";
+          social.style.transform = "translateY(-50px)";
         }
       }
     </script>
