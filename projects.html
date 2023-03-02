@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,68 +8,134 @@
     <title>Micah Bala | Online</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet" />
     <script src="https://use.fontawesome.com/d90234d410.js"></script>
   </head>
+
   <body>
     <div class="container">
-      <nav>
-        <div class="menu-icon" onclick="toggleMenu()">
-          <i class="fa fa-bars"></i>
-        </div>
-        <div class="portrait">
+      <header class="header">
+        <div class="profile">
           <img src="images/me.jpg" alt="micah's picture" />
           <h1>Micah Bala</h1>
-          <h3>Full-stack Web Developer</h3>
+          <h3>Frontend Web Developer</h3>
         </div>
-        <div id="nav-menu">
-          <ul class="menu">
-            <li><a href="index.html">Welcome</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li class="active"><a href="projects.html">Projects</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-          <div class="social">
-            <a href="https://github.com/micahbala" target="_blank"
-              ><i class="fa fa-github-square"></i
-            ></a>
-            <a href="https://twitter.com/micahbala" target="_blank"
-              ><i class="fa fa-twitter-square"></i
-            ></a>
-            <a href="https://linkedin.com/in/micahbala" target="_blank"
-              ><i class="fa fa-linkedin"></i
-            ></a>
+        <div class="navigation">
+          <nav>
+            <div id="menu-icon" onclick="toggleMenu()">
+              <i class="fa fa-bars"></i>
+            </div>
+            <ul class="menu hide" id="menu-list">
+              <li><a href="index.html">Welcome</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li class="active"><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="links">
+            <div class="social" id="social-media">
+              <a href="https://github.com/micahbala" target="_blank"><i class="fa fa-github-square"></i></a>
+              <a href="https://twitter.com/micahbala" target="_blank"><i class="fa fa-twitter-square"></i></a>
+              <a href="https://linkedin.com/in/micahbala" target="_blank">
+                <i class="fa fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
-      </nav>
-      <main class="projects">
-        <div class="card">
-          <a href="#">
-            <img src="images/news-page.png" alt="" />
-          </a>
-          <div class="card-body">
-            <h3>News Links site</h3>
-            <small>Simple site that allows you to links to news sites</small>
+      </header>
+      <main class="main">
+        <div class="projects-content">
+          <div class="project-card">
+            <div class="card-img">
+              <img src="/images/realtor-clone.jpg" alt="project thumbnail" />
+            </div>
+            <div class="card-details">
+              <h2>Realtor Site Clone</h2>
+              <p>Users can create account, add listings of houses/apartments for rent or for sale to the page,
+                they can also edit listings. <a class="live-link" href="https://realtor-clone-with-react.vercel.app/"
+                  target="_blank">Live link</a>
+              </p>
+              <h3>HTML, CSS - Styled Components, ReactJS, Firebase</h3>
+            </div>
           </div>
+
+          <div class="project-card">
+            <div class="card-img">
+              <img src="/images/shop-online.jpg" alt="project thumbnail" />
+            </div>
+            <div class="card-details">
+              <h2>Shop Online</h2>
+              <p>
+                Mimicks an e-commerce app that allows users to add items to their cart, and place an order for
+                these items. When an order is placed, the app just empties the cart. <a class="live-link"
+                  href="https://myshop-online.netlify.app/" target="_blank">Live
+                  link</a>
+              </p>
+              <h3>HTML, CSS, ReactJS, FakeAPI Store</h3>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="card-img">
+              <img src="/images/movie-search.jpg" alt="project thumbnail" />
+            </div>
+            <div class="card-details">
+              <h2>Movie Search</h2>
+              <p>
+                Uses the MovieDb API to search for movie title that matches the query entered by the user and displays a
+                list of the movies that match the query <a class="live-link"
+                  href="https://all-movie-search2022.netlify.app/" target="_blank">Live
+                  link</a>
+              </p>
+              <h3>HTML, CSS, ReactJS, MovieDBAPI</h3>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="card-img">
+              <img src="/images/memory-game.jpg" alt="project thumbnail" />
+            </div>
+            <div class="card-details">
+              <h2>Memory Game</h2>
+              <p>
+                Memory game designed with vanilla JS that allows user to click on a card to reveal its content. Why not
+                try it and see how many moves you can make within the shortest possible time.
+                <a class="live-link" href="https://mymemory-game.netlify.app/" target="_blank">Live
+                  link</a>
+              </p>
+              <h3>HTML, CSS, Vanilla JavaScript</h3>
+            </div>
+          </div>
+
+
         </div>
       </main>
     </div>
 
-    <!-- JS for toggle menu -->
     <script>
-      let menu = document.getElementById("nav-menu");
-      // menu.style.maxHeight = "0px";
+      let menu = document.getElementById("menu-list");
+      let social = document.getElementById("social-media");
 
       function toggleMenu() {
-        if (menu.style.maxHeight == "0px") {
-          menu.style.maxHeight = "200px";
+        if (menu.classList.contains("hide")) {
+          menu.classList.remove("hide");
+          menu.classList.add("show");
+
+          // social.style.position = "absolute";
+          // social.style.top = "10";
+          // social.style.left = "20";
+          social.style.transform = "translateY(-210px)";
         } else {
-          menu.style.maxHeight = "0px";
+          menu.classList.remove("show");
+          menu.classList.add("hide");
+
+          // social.style.position = "absolute";
+          // social.style.top = "10";
+          // social.style.left = "20";
+          social.style.transform = "translateY(-50px)";
         }
       }
     </script>
   </body>
+
 </html>

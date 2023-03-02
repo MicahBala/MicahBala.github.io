@@ -127,6 +127,7 @@ ul li a:hover,
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -172,6 +173,102 @@ ul li a:hover,
   font-size: 2rem;
   padding-bottom: 1rem;
 }
+
+
+/* 
+***** Projects Page *****
+*/
+.projects-content {
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+}
+
+.project-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin-bottom: 1.5rem;
+}
+
+.card-img {
+  width: 35%;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+
+.card-img:hover {
+  scale: 1.2;
+}
+
+.card-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-details {
+  width: 60%;
+  padding-left: 1rem;
+  line-height: 1.5rem;
+}
+
+.card-details h2 {
+  margin-bottom: 1rem;
+}
+
+.card-details h3 {
+  margin-top: 1rem;
+  background-color: #fff;
+  color: #000;
+  width: 100%;
+  padding: 0 0.5rem;
+  opacity: 0.7;
+}
+
+.live-link {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  background-color: #fff;
+  font-size: 0.8rem;
+  padding: 0.2rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+
+/* 
+***** Contact Page *****
+*/
+.contact-content {
+  width: 70%;
+  padding: 2rem;
+  line-height: 3rem;
+  margin: 10%
+}
+
+.contact-wrapper {
+  display: flex;
+}
+
+.contact-wrapper a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 1rem;
+  border: solid 1px #fff;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+}
+
+.contact-wrapper a:hover {
+  scale: 1.2;
+}
+
 
 /* 
 ********* Media Query for Menu ************
@@ -241,6 +338,7 @@ ul li a:hover,
     padding-left: 2rem;
     margin: 0;
   }
+
   .main-content h1 {
     font-size: 3rem;
     margin: 0;
@@ -250,5 +348,25 @@ ul li a:hover,
     width: 100%;
     padding: 4rem 2rem 0 2rem;
     margin: 0;
+  }
+
+  .project-card {
+    flex-direction: column;
+  }
+
+  .card-img,
+  .card-details {
+    width: 100%;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-wrapper a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
